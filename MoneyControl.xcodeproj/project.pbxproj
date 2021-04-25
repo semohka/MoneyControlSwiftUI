@@ -18,10 +18,14 @@
 		0E09D23826274673002E2220 /* MoneyControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09D23726274673002E2220 /* MoneyControlUITests.swift */; };
 		0E09D249262CD3FC002E2220 /* AddNewReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09D248262CD3FC002E2220 /* AddNewReceipt.swift */; };
 		0E09D24E262CDB2F002E2220 /* UpdateReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09D24D262CDB2F002E2220 /* UpdateReceipt.swift */; };
-		0E09D2542635DC79002E2220 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09D2532635DC79002E2220 /* Product.swift */; };
-		0E09D2662635DEE8002E2220 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09D2652635DEE8002E2220 /* Shop.swift */; };
-		0E09D2702635DF27002E2220 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09D26F2635DF27002E2220 /* Receipt.swift */; };
-		0E09D2782635E93C002E2220 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09D2772635E93C002E2220 /* Category.swift */; };
+		0E09D2872635F3D7002E2220 /* Receipt+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09D27F2635F3D7002E2220 /* Receipt+CoreDataClass.swift */; };
+		0E09D2882635F3D7002E2220 /* Receipt+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09D2802635F3D7002E2220 /* Receipt+CoreDataProperties.swift */; };
+		0E09D2892635F3D7002E2220 /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09D2812635F3D7002E2220 /* Category+CoreDataClass.swift */; };
+		0E09D28A2635F3D7002E2220 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09D2822635F3D7002E2220 /* Category+CoreDataProperties.swift */; };
+		0E09D28B2635F3D7002E2220 /* Product+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09D2832635F3D7002E2220 /* Product+CoreDataClass.swift */; };
+		0E09D28C2635F3D7002E2220 /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09D2842635F3D7002E2220 /* Product+CoreDataProperties.swift */; };
+		0E09D28D2635F3D7002E2220 /* Shop+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09D2852635F3D7002E2220 /* Shop+CoreDataClass.swift */; };
+		0E09D28E2635F3D7002E2220 /* Shop+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09D2862635F3D7002E2220 /* Shop+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,10 +63,14 @@
 		0E09D23926274673002E2220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E09D248262CD3FC002E2220 /* AddNewReceipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewReceipt.swift; sourceTree = "<group>"; };
 		0E09D24D262CDB2F002E2220 /* UpdateReceipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateReceipt.swift; sourceTree = "<group>"; };
-		0E09D2532635DC79002E2220 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
-		0E09D2652635DEE8002E2220 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
-		0E09D26F2635DF27002E2220 /* Receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
-		0E09D2772635E93C002E2220 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		0E09D27F2635F3D7002E2220 /* Receipt+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Receipt+CoreDataClass.swift"; path = "MoneyControl/CoreData/Receipt+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		0E09D2802635F3D7002E2220 /* Receipt+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Receipt+CoreDataProperties.swift"; path = "MoneyControl/CoreData/Receipt+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		0E09D2812635F3D7002E2220 /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Category+CoreDataClass.swift"; path = "MoneyControl/CoreData/Category+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		0E09D2822635F3D7002E2220 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Category+CoreDataProperties.swift"; path = "MoneyControl/CoreData/Category+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		0E09D2832635F3D7002E2220 /* Product+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Product+CoreDataClass.swift"; path = "MoneyControl/CoreData/Product+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		0E09D2842635F3D7002E2220 /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Product+CoreDataProperties.swift"; path = "MoneyControl/CoreData/Product+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		0E09D2852635F3D7002E2220 /* Shop+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Shop+CoreDataClass.swift"; path = "MoneyControl/CoreData/Shop+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		0E09D2862635F3D7002E2220 /* Shop+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Shop+CoreDataProperties.swift"; path = "MoneyControl/CoreData/Shop+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +121,7 @@
 		0E09D2112627466F002E2220 /* MoneyControl */ = {
 			isa = PBXGroup;
 			children = (
-				0E09D2522635DC59002E2220 /* CoreData */,
+				0E09D2922635F629002E2220 /* CoreData */,
 				0E09D2122627466F002E2220 /* AppDelegate.swift */,
 				0E09D2142627466F002E2220 /* SceneDelegate.swift */,
 				0E09D2162627466F002E2220 /* ContentView.swift */,
@@ -154,13 +162,17 @@
 			path = MoneyControlUITests;
 			sourceTree = "<group>";
 		};
-		0E09D2522635DC59002E2220 /* CoreData */ = {
+		0E09D2922635F629002E2220 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				0E09D2532635DC79002E2220 /* Product.swift */,
-				0E09D2652635DEE8002E2220 /* Shop.swift */,
-				0E09D26F2635DF27002E2220 /* Receipt.swift */,
-				0E09D2772635E93C002E2220 /* Category.swift */,
+				0E09D2862635F3D7002E2220 /* Shop+CoreDataProperties.swift */,
+				0E09D2852635F3D7002E2220 /* Shop+CoreDataClass.swift */,
+				0E09D2842635F3D7002E2220 /* Product+CoreDataProperties.swift */,
+				0E09D2832635F3D7002E2220 /* Product+CoreDataClass.swift */,
+				0E09D2822635F3D7002E2220 /* Category+CoreDataProperties.swift */,
+				0E09D2812635F3D7002E2220 /* Category+CoreDataClass.swift */,
+				0E09D2802635F3D7002E2220 /* Receipt+CoreDataProperties.swift */,
+				0E09D27F2635F3D7002E2220 /* Receipt+CoreDataClass.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -295,16 +307,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E09D2702635DF27002E2220 /* Receipt.swift in Sources */,
-				0E09D2782635E93C002E2220 /* Category.swift in Sources */,
 				0E09D2132627466F002E2220 /* AppDelegate.swift in Sources */,
 				0E09D2152627466F002E2220 /* SceneDelegate.swift in Sources */,
+				0E09D28C2635F3D7002E2220 /* Product+CoreDataProperties.swift in Sources */,
+				0E09D2872635F3D7002E2220 /* Receipt+CoreDataClass.swift in Sources */,
 				0E09D249262CD3FC002E2220 /* AddNewReceipt.swift in Sources */,
+				0E09D2882635F3D7002E2220 /* Receipt+CoreDataProperties.swift in Sources */,
+				0E09D28B2635F3D7002E2220 /* Product+CoreDataClass.swift in Sources */,
 				0E09D24E262CDB2F002E2220 /* UpdateReceipt.swift in Sources */,
+				0E09D28D2635F3D7002E2220 /* Shop+CoreDataClass.swift in Sources */,
 				0E09D21A2627466F002E2220 /* MoneyControl.xcdatamodeld in Sources */,
+				0E09D28A2635F3D7002E2220 /* Category+CoreDataProperties.swift in Sources */,
+				0E09D28E2635F3D7002E2220 /* Shop+CoreDataProperties.swift in Sources */,
+				0E09D2892635F3D7002E2220 /* Category+CoreDataClass.swift in Sources */,
 				0E09D2172627466F002E2220 /* ContentView.swift in Sources */,
-				0E09D2662635DEE8002E2220 /* Shop.swift in Sources */,
-				0E09D2542635DC79002E2220 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

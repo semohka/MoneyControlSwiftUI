@@ -4,12 +4,13 @@
         <attribute name="title" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Product" representedClassName=".Product" syncable="YES">
-        <attribute name="category" optional="YES" attributeType="String"/>
         <attribute name="comment" optional="YES" attributeType="String"/>
         <attribute name="count" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="price_of_one" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="price_total" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="tittle" optional="YES" attributeType="String"/>
-        <attribute name="total_price" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category"/>
+        <relationship name="receipt" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Receipt"/>
     </entity>
     <entity name="Receipt" representedClassName=".Receipt" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
@@ -20,7 +21,7 @@
         <attribute name="tittle" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Product" positionX="-63" positionY="-18" width="128" height="119"/>
+        <element name="Product" positionX="-63" positionY="-18" width="128" height="134"/>
         <element name="Shop" positionX="-36" positionY="36" width="128" height="44"/>
         <element name="Receipt" positionX="-18" positionY="45" width="128" height="74"/>
         <element name="Category" positionX="9" positionY="90" width="128" height="44"/>

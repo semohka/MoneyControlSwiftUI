@@ -22,9 +22,9 @@ struct AddNewReceipt: View {
                     }
                     Section {
                         Button(action: {
-                            let receiptContent = Receipt()
-                            receiptContent.title = shop
-                            receiptContent.date = date
+//                            let receiptContent = Receipt()
+//                            receiptContent.title = shop
+//                            receiptContent.date = date
                             
                         }, label: {
                             HStack {
