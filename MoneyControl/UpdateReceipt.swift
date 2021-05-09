@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct UpdateReceipt: View {
+    
+    @State var receipt: Receipt
+    
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
@@ -15,6 +18,6 @@ struct UpdateReceipt: View {
 
 struct UpdateReceipt_Previews: PreviewProvider {
     static var previews: some View {
-        UpdateReceipt()
+        UpdateReceipt(receipt: Receipt())
     }
 }

@@ -9,22 +9,52 @@ import SwiftUI
 
 struct AddNewReceipt: View {
     
+    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.managedObjectContext) var managedOdjectContext
+    
     @State var shop: String = ""
     @State var date: Date = Date()
+    
+    let shops = ["Вв","Пят","Дик"]
     
     var body: some View {
         NavigationView {
             VStack {
                 Form {
                     Section {
-                        TextField("Введите название магазина", text: $shop)
+                        Picker(selection: $shop, label: Text("Магазин")) {
+                            ForEach(shops, id: \.self) {
+                                Text($0)
+                            }
+                            
+                        }
                         DatePicker("Дата", selection: $date)
                     }
                     Section {
                         Button(action: {
-//                            let receiptContent = Receipt()
-//                            receiptContent.title = shop
-//                            receiptContent.date = date
+                            let shopContent = Shop(context: self.managedOdjectContext)
+                            shopContent.tittle = shop
+                            
+                            
+                            do {
+                                try self.managedOdjectContext.save()
+                            }catch{
+                               print(error)
+                            }
+                            
+                            
+                            
+                            let receiptContent = Receipt(context: self.managedOdjectContext)
+                            receiptContent.shop = shopContent
+                            receiptContent.date = date
+                            
+                            do {
+                                try self.managedOdjectContext.save()
+                            }catch{
+                               print(error)
+                            }
+
+                            presentationMode.wrappedValue.dismiss()
                             
                         }, label: {
                             HStack {

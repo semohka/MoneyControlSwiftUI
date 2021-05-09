@@ -9,6 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @Environment(\.managedObjectContext) var managedOdjectContext
+//    @FetchRequest(fetchRequest: Receipt.entity() var receipt: FetchedResults<Receipt>
+//    @FetchRequest(fetchRequest: Receipt.getAllToDoItems()) var receipt: FetchedResults<Receipt>
+//
+//
+    
+//    @FetchRequest(fetchRequest: Receipt.fetchRequest()
+    
+    @FetchRequest(
+        entity: Receipt.entity(),
+        sortDescriptors: [
+            NSSortDescriptor(keyPath: \Receipt.date, ascending: false)
+    ]
+    ) var receipts: FetchedResults<Receipt>
+    
+    
+    
+    
     @State private var showingAddNewReceiptView: Bool = false
     @State var productCategory = ""
     @State var shop = ""
@@ -17,11 +35,12 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 Form {
-                    NavigationLink(destination: UpdateReceipt()){
+                    ForEach(receipts, id: \.tittle) { receipt in
+                    NavigationLink(destination: UpdateReceipt(receipt: receipt).environment(\.managedObjectContext, managedOdjectContext)){
                         HStack {
-                            Text("Магазин")
+                            Text(receipt.shop?.tittle ?? "Нет магазина")
                             Spacer()
-                            Text("Цена")
+                            Text("\(receipt.date!)")
                         }
                     }
                 }
@@ -48,4 +67,5 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
+}
 }
