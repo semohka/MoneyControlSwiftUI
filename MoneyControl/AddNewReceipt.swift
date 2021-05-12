@@ -22,27 +22,32 @@ struct AddNewReceipt: View {
             VStack {
                 Form {
                     Section {
-                        Picker(selection: $shop, label: Text("Магазин")) {
-                            ForEach(shops, id: \.self) {
-                                Text($0)
-                            }
-                            
+                          Picker(selection: $shop, label: Text("Магазин")) {
+                            Button(action: {
+                                        }, label: {
+                                            Text("Add")
+                                        })
+                                ForEach(shops, id: \.self) {
+                                    Text($0)
+                                }
+
+
                         }
-                        DatePicker("Дата", selection: $date)
+
                     }
-                    Section {
+
+
+                    
+                    
+                    
+                    
+                    
+
+                        DatePicker("Дата", selection: $date)
+                
                         Button(action: {
                             let shopContent = Shop(context: self.managedOdjectContext)
                             shopContent.tittle = shop
-                            
-                            
-                            do {
-                                try self.managedOdjectContext.save()
-                            }catch{
-                               print(error)
-                            }
-                            
-                            
                             
                             let receiptContent = Receipt(context: self.managedOdjectContext)
                             receiptContent.shop = shopContent
@@ -63,10 +68,13 @@ struct AddNewReceipt: View {
                                 Spacer()
                             }
                         })
-                    }
+                    
                 }
             }
             .navigationBarTitle(Text("Создать новый чек"), displayMode: .inline)
+            
+
+            
         }
     }
 }

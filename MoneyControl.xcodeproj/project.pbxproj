@@ -26,6 +26,7 @@
 		0E09D28C2635F3D7002E2220 /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09D2842635F3D7002E2220 /* Product+CoreDataProperties.swift */; };
 		0E09D28D2635F3D7002E2220 /* Shop+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09D2852635F3D7002E2220 /* Shop+CoreDataClass.swift */; };
 		0E09D28E2635F3D7002E2220 /* Shop+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09D2862635F3D7002E2220 /* Shop+CoreDataProperties.swift */; };
+		0E994CF5264C7CF400871F2F /* AddNewShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E994CF4264C7CF400871F2F /* AddNewShop.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		0E09D2842635F3D7002E2220 /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Product+CoreDataProperties.swift"; path = "MoneyControl/CoreData/Product+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		0E09D2852635F3D7002E2220 /* Shop+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Shop+CoreDataClass.swift"; path = "MoneyControl/CoreData/Shop+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		0E09D2862635F3D7002E2220 /* Shop+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Shop+CoreDataProperties.swift"; path = "MoneyControl/CoreData/Shop+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		0E994CF4264C7CF400871F2F /* AddNewShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewShop.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 		0E09D2112627466F002E2220 /* MoneyControl */ = {
 			isa = PBXGroup;
 			children = (
+				0E994CF3264C7C4200871F2F /* Shops */,
 				0E09D2922635F629002E2220 /* CoreData */,
 				0E09D2122627466F002E2220 /* AppDelegate.swift */,
 				0E09D2142627466F002E2220 /* SceneDelegate.swift */,
@@ -175,6 +178,14 @@
 				0E09D27F2635F3D7002E2220 /* Receipt+CoreDataClass.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		0E994CF3264C7C4200871F2F /* Shops */ = {
+			isa = PBXGroup;
+			children = (
+				0E994CF4264C7CF400871F2F /* AddNewShop.swift */,
+			);
+			path = Shops;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,6 +331,7 @@
 				0E09D28A2635F3D7002E2220 /* Category+CoreDataProperties.swift in Sources */,
 				0E09D28E2635F3D7002E2220 /* Shop+CoreDataProperties.swift in Sources */,
 				0E09D2892635F3D7002E2220 /* Category+CoreDataClass.swift in Sources */,
+				0E994CF5264C7CF400871F2F /* AddNewShop.swift in Sources */,
 				0E09D2172627466F002E2220 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

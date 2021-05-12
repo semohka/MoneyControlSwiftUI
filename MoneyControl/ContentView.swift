@@ -10,62 +10,70 @@ import SwiftUI
 struct ContentView: View {
     
     @Environment(\.managedObjectContext) var managedOdjectContext
-//    @FetchRequest(fetchRequest: Receipt.entity() var receipt: FetchedResults<Receipt>
-//    @FetchRequest(fetchRequest: Receipt.getAllToDoItems()) var receipt: FetchedResults<Receipt>
-//
-//
-    
-//    @FetchRequest(fetchRequest: Receipt.fetchRequest()
     
     @FetchRequest(
         entity: Receipt.entity(),
         sortDescriptors: [
             NSSortDescriptor(keyPath: \Receipt.date, ascending: false)
-    ]
+        ]
     ) var receipts: FetchedResults<Receipt>
     
     
-    
-    
     @State private var showingAddNewReceiptView: Bool = false
-    @State var productCategory = ""
-    @State var shop = ""
     
     var body: some View {
         NavigationView {
             VStack {
                 Form {
-                    ForEach(receipts, id: \.tittle) { receipt in
-                    NavigationLink(destination: UpdateReceipt(receipt: receipt).environment(\.managedObjectContext, managedOdjectContext)){
-                        HStack {
-                            Text(receipt.shop?.tittle ?? "Нет магазина")
-                            Spacer()
-                            Text("\(receipt.date!)")
+                    ForEach(receipts, id: \.self) { receipt in
+                        NavigationLink(destination: UpdateReceipt(receipt: receipt).environment(\.managedObjectContext, managedOdjectContext)){
+                            HStack {
+                                Text(receipt.shop?.tittle ?? "Нет магазина")
+                                Spacer()
+                                Text("\(receipt.date!)")
+                            }
                         }
                     }
                 }
-            }
-            .navigationBarTitle(Text("Мои чеки"), displayMode: .inline)
-            .navigationBarItems(trailing:
-                                    Button(action: {
-                                        self.showingAddNewReceiptView.toggle()
-                                    }) {
-                                        Image(systemName: "plus.circle.fill")
-                                            .foregroundColor(.green)
-                                            .imageScale(.large)
-                                    })
-            .sheet(isPresented: $showingAddNewReceiptView) {
-                AddNewReceipt()
+                .navigationBarTitle(Text("Мои чеки"), displayMode: .inline)
+                .navigationBarItems(trailing:
+                                        Button(action: {
+                                            self.showingAddNewReceiptView.toggle()
+                                        }) {
+                                            Image(systemName: "plus.circle.fill")
+                                                .foregroundColor(.green)
+                                                .imageScale(.large)
+                                        })
+                .sheet(isPresented: $showingAddNewReceiptView) {
+                    AddNewReceipt()
+                    
+                }
                 
             }
-            
+            .toolbar {
+                ToolbarItem(placement: .bottomBar) {
+                    HStack {
+                        Button(action: {}, label:{
+                            Image(systemName: "list.bullet")
+                        })
+                        Button(action: {}, label:{
+                            Image(systemName: "chart.bar")
+                        })
+                        Button(action: {}, label:{
+                            Image(systemName: "gearshape")
+                        })
+
+                    }
+                }
+            }
+        }
+
+    }
+}
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
         }
     }
-}
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
-}
+
