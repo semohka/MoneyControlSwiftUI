@@ -48,23 +48,6 @@ struct ContentView: View {
                     AddNewReceipt()
                     
                 }
-                
-            }
-            .toolbar {
-                ToolbarItem(placement: .bottomBar) {
-                    HStack {
-                        Button(action: {}, label:{
-                            Image(systemName: "list.bullet")
-                        })
-                        Button(action: {}, label:{
-                            Image(systemName: "chart.bar")
-                        })
-                        Button(action: {}, label:{
-                            Image(systemName: "gearshape")
-                        })
-
-                    }
-                }
             }
         }
 
