@@ -12,36 +12,24 @@ struct AddNewReceipt: View {
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.managedObjectContext) var managedOdjectContext
     
+      
     @State var shop: String = ""
     @State var date: Date = Date()
-    
-    let shops = ["Вв","Пят","Дик"]
+  
     
     var body: some View {
         NavigationView {
             VStack {
                 Form {
                     Section {
-                          Picker(selection: $shop, label: Text("Магазин")) {
-                            Button(action: {
+                            NavigationLink(destination: AddNewShop().environment(\.managedObjectContext, managedOdjectContext)) {
+                                    Button(action: {
                                         }, label: {
-                                            Text("Add")
+                                            Text("Выберите магазин")
                                         })
-                                ForEach(shops, id: \.self) {
-                                    Text($0)
-                                }
-
-
-                        }
-
+                            }
                     }
 
-
-                    
-                    
-                    
-                    
-                    
 
                         DatePicker("Дата", selection: $date)
                 

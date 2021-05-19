@@ -15,6 +15,11 @@ struct MainView: View {
                     Image(systemName: "list.bullet")
                     Text("")
                 }
+            StatisticContentView()
+                .tabItem {
+                    Image(systemName: "bolt.horizontal")
+                    Text("")
+                }
         }
         .accentColor(.green)
     }
